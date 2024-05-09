@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="pedidos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pedido" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cpfCliente" type="xs:string"/>
+                            <xs:element name="dataCadastro" type="xs:dateTime" minOccurs="0"/>
+                            <xs:element name="numeroPedido" type="xs:long"/>
+                            <xs:element name="pedidoItem" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:long"/>
+                                        <xs:element name="quantidade" type="xs:long"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
